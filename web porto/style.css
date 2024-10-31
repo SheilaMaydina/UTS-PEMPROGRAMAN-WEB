@@ -1,0 +1,362 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin-left: 0;
+    position: relative; 
+}
+
+header nav ul li a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+header nav ul li a:hover {
+    background-color: #ad0101; 
+    color: #fff; 
+}
+
+
+.hero {
+    position: relative; 
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-height: 100%; 
+    min-width: 90%; 
+    transform: translate(-50%, -50%); 
+    z-index: 0; 
+}
+
+.container {
+    position: relative; 
+    z-index: 1; 
+    color: #fff; 
+}
+
+.notification  {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    font-size: 16px;
+    z-index: 9999;
+    
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #ad0101; /* Border pada tombol */
+    border-radius: 5px; /* Membuat border lebih halus di sudut */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+.btn:hover {
+    background-color: #ad0101; /* Warna latar saat hover */
+    color: #fff;
+}
+
+
+/* Section Titles */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section h2 {
+    color: #000000; /* Ganti dengan warna yang diinginkan */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #666;
+}
+
+.cerita p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    color: #666;
+}
+.lagu p {
+    font-size: 18px;
+    color: #666;
+}
+.lagu h2 {
+    text-align: center;
+    color: #000000; /* Ganti dengan warna yang diinginkan */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.cerita h2 {
+    text-align: center;
+    color: #000000; /* Ganti dengan warna yang diinginkan */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.members {
+    display: flex; /* Mengatur elemen menjadi flexbox untuk sejajar */
+    justify-content: center; /* Pusatkan elemen dalam kontainer */
+    gap: 25px; /* Jarak antar anggota */
+    flex-wrap: wrap; /* Membungkus jika ruang tidak cukup */
+    margin-top: 20px;
+}
+
+.member {
+    width: 200px; /* Ukuran tetap untuk setiap anggota */
+    text-align: center; /* Pusatkan teks di bawah gambar */
+}
+
+.member img {
+    width: 100%; /* Lebar gambar sesuai lebar kontainer */
+    height: 200px; /* Tetapkan tinggi untuk gambar */
+    object-fit: cover; /* Memastikan gambar terpotong dengan proporsional */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Menambahkan warna yang berbeda untuk setiap member */
+.member:nth-child(1) h3 {
+    color: #ad0101; /* Warna untuk Duta */
+}
+
+.member:nth-child(2) h3 {
+    color: #ad0101; /* Warna untuk Eross */
+}
+
+.member:nth-child(3) h3 {
+    color: #ad0101; /* Warna untuk Adam */
+}
+
+.album-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan kolom */
+    gap: 20px; /* Jarak antar album */
+}
+
+.album {
+    width: calc(33.333% - 20px); /* Mengatur lebar album agar muat 3 kolom */
+    max-width: 200px; /* Batas maksimal lebar album */
+    background-color: #000000;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+.album img {
+    width: 100%; /* Membuat gambar album responsif */
+    height: auto; /* Mengatur tinggi otomatis */
+    max-height: 200px; /* Membatasi tinggi maksimal */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+.album h3 {
+    color: rgb(255, 255, 255); /* Ganti dengan warna yang diinginkan */
+}
+
+.album p {
+    color: #d3bebe; /* Ganti dengan warna yang diinginkan */
+}
+
+.album a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ad0101; /* Warna teks tautan */
+    text-decoration: none;
+    border: 2px solid #ad0101; /* Border dengan warna yang sama */
+    padding: 5px 10px; /* Ruang di dalam border */
+    border-radius: 5px; /* Sudut border yang membulat */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+.album a:hover {
+    background-color: #ad0101; /* Warna latar belakang saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+.event {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #222; /* Latar belakang kotak */
+    border: 2px solid #ad0101; /* Warna border */
+    border-radius: 5px; /* Sudut membulat */
+    padding: 15px; /* Ruang di dalam kotak */
+    transition: transform 0.3s; /* Efek transisi saat hover */
+}
+
+.event:hover {
+    transform: scale(1.05); /* Memperbesar sedikit saat hover */
+}
+
+.event h3 {
+    font-size: 24px;
+    color: #ffffff; /* Warna teks */
+}
+
+.event p {
+    color: #ffffff; /* Warna teks untuk deskripsi */
+}
+.ticket-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ad0101; /* Warna teks tautan */
+    text-decoration: none;
+    border: 2px solid #ad0101; /* Border dengan warna yang sama */
+    padding: 5px 10px; /* Ruang di dalam border */
+    border-radius: 5px; /* Sudut border yang membulat */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+}
+
+.ticket-link:hover {
+    background-color: #ad0101; /* Warna latar belakang saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+/* Galeri Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 5px solid #ad0101; /* Menambahkan border pada setiap foto */
+}
+
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social a {
+    color: #ad0101;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .members,
+    .album-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
